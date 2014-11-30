@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var data = [];
 	var enabler = 0;
 	var audio;
-	lockedAllowed = window.screen.lockOrientation("portrait-primary");
+
 
 	// Find button via ID and prevent form submitting
 	$("#toggle").click(function(event){
@@ -37,12 +37,17 @@ $(document).ready(function() {
 	function playSound(freqGiven, sampleGiven){
 		var freq = freqGiven;  // Frequency (cycles per second)
 		var rate = sampleGiven;  // Sample rate (samples per second)
-		for(var i = 0; i < 10000; i++) {
-		    var time = i / rate;       
-		    data[i] = 128 + Math.round(127 * (Math.sin(2 * Math.PI * freq * time)));
-		}
+		  for (var i=0; i<rate; i++) { // fills array with samples
+		    var t = i/rate;            // time from 0 to 1
+		    // Generate samples using sine wave equation (between 0 and 255)
+		    data[i] = 128+Math.round(127*Math.sin(freq*2*Math.PI*t));
+		  }
 		var wave = new RIFFWAVE(data);
+		wave.header.sampleRate = rate;
+		wave.header.numChannels = 1;
+		wave.Make(data);
 		audio = new Audio(wave.dataURI);
+		audio.loop = true;
 	}
 
 	function getDefaultSample(sampleId){
