@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frequency Generator</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/pure-min.css">
+	<link rel="stylesheet" type="text/css" href="css/side-menu.css">
+	<link rel="stylesheet" type="text/css" href="css/customize.css">
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="#">FreqGen</a>
+
+            <ul>
+                <li class="menu-item-divided pure-menu-selected">
+                	<a href="#">Generator</a>
+                </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>FGen</h1>
+            <h2>sound at given frequency generator</h2>
+        </div>
+
+        <div class="content">
+            <p>
+            	<form class="pure-form">
+            	<div class="center-input">
+				    <input id="hz" type="number" max="20000" min="1000" step="500" class="pure-input-rounded dwiescie" placeholder="Hertz (17khz~ max)">
+				    <input id="sample" type="number" min="1200" max="44100" class="pure-input-rounded dwiescie" placeholder="Sample (44100 max)">
+				</div>
+				<div class="center-button">	
+				    <button id="toggle" class="button-large button-success pure-button">
+					    <i class="fa fa-play"></i>
+					    Toggle
+					</button>
+				</div>	
+				</form>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Purecss -->
+<script type="text/javascript" src="js/ui.js"></script>
+<!-- My scripts, mainly for sound generating and jquery -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/freqgen.js"></script>
+<script type="text/javascript" src="js/riffwave.js"></script>
+</body>
+</html>

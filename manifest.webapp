@@ -1,0 +1,14 @@
+{
+  "name": "FreqGen",
+  "description": "Sound at a given frequency generator. Can be used as a toy, tweaking tool or simply as annoyance tool.",
+  "launch_path": "/index.html#home",
+  "icons": {
+    "512": "/img/icon-512.png",
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Tomasz Żubertowski",
+    "url": "http://zadnychlag.blogspot.com"
+  },
+  "default_locale": "en"
+}

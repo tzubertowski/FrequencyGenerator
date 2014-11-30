@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frequency Generator</title>
+	<link rel="stylesheet" type="text/css" href="css/pure-min.css">
+	<link rel="stylesheet" type="text/css" href="css/side-menu.css">
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="#">FreqGen</a>
+
+            <ul>
+                <li>
+                	<a href="index.html">Generator</a>
+                </li>
+                <li class="menu-item-divided pure-menu-selected"><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Sound Frequency Generator</h1>
+            <h2>..or an annoyance tool.</h2>
+        </div>
+
+        <div class="content">
+            <h2 class="content-subhead">About</h2>
+            <p>
+            	I once needed to generate sound at given frequency ad hoc for discussion purposes. Sadly no app on the Firefox OS market provided such functionality. And so I wrote this simple app to generate w/e you want.
+            </p>
+
+            <h2 class="content-subhead">How to use and other infos</h2>
+            <p>
+                Well, all you have to do is insert the frequency you want the sound to be generated at and push the button start/stop. Those speak for themselves.
+                In theory you could plug your phone to a good quality sound output device and generate sounds beyond 20 kHz. Sadly, from my experiences, you can't generate more than 19 kHz sound on a mobile device speaker. Keep that in mind while annoying the dogs.. I mean, while testing.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Purecss -->
+<script type="text/javascript" src="js/ui.js"></script>
+<!-- My scripts, mainly for sound generating and jquery -->
+<script type="text/javascript" src="js/freqgen.js"></script>
+<script type="text/javascript" src="js/riffwave.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+</body>
+</html>
